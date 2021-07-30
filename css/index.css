@@ -117,13 +117,16 @@ section {
 
 }
 .slideInner .slide2 .text p { 
-    background-image: linear-gradient(to right, #00f, #f00);
+    background-image: linear-gradient(to right, rgba(238, 26, 26, 0.911), rgb(209, 120, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* color: rgb(208, 211, 48); */
     font-family: 'East Sea Dokdo', cursive;
 }
 .slideInner .slide3 .text p { 
-    color: green;
+    background-image: linear-gradient(to right, rgba(238, 26, 26, 0.911), rgb(56, 209, 102));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'East Sea Dokdo', cursive;
 }
 .slideInner .slide4 { overflow: hidden;}
