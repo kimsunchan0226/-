@@ -28,7 +28,7 @@ h1 { position: fixed; top: 10px; left: 100px; z-index: 999; width: 100px; height
     color: #777; font-size: 20px; transition: all 0.5s;
 }
 #nav li.on a { color: #fff;
-    /* padding: 0 10px; */
+    text-shadow: 0px 0px 10px #fff
 }
 #nav .depth1 li a {display: block;}
 #nav .depth1 li { float: left; background-color: #555;
@@ -310,6 +310,14 @@ section {
     margin-left: -50px;
     z-index: 999; 
     cursor: pointer;
+    color: #fff;
+    text-align: center;
+    padding-top: 8px;
+   
+}
+.cbtn span {
+    font-size: 20px;
+    text-shadow: 0px 0px 10px #fff
 }
 
 /* 세 번째 박스 */
