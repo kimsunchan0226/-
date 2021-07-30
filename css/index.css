@@ -1,0 +1,389 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+/* font-family: 'East Sea Dokdo', cursive; */
+
+html { overflow:hidden }
+body { font:12px/1.6 arial; color:#555; }
+
+
+
+
+
+/* #menu { position:fixed; top:50%; transform:translateY(-50%); left:50px; z-index:99 }
+#menu li {  margin:10px 0  }
+#menu li a { display:block; height:20px;  width:20px;
+    border-radius:50%; background-color:red;
+    position:relative 
+}
+#menu li.on a { background-color:blue; transform:scale(1.2) }
+#menu li a span { position:absolute; top:3px; left:30px; 
+    width:100px; display:none; }    
+#menu li.on a span { display:block } */
+
+
+
+h1 { position: fixed; top: 10px; left: 100px; z-index: 999; width: 100px; height: 80px;}
+#nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 999; 
+    color: #777; font-size: 20px; transition: all 0.5s;
+}
+#nav li.on a { color: #fff;
+    /* padding: 0 10px; */
+}
+#nav .depth1 li a {display: block;}
+#nav .depth1 li { float: left; background-color: #555;
+     padding: 40px 30px; transition: all 0.5s;
+} 
+
+#wrap {position: relative;}
+section {
+    width:100vw; 
+    height:100vh;
+    position:relative;
+    /* border: 1px solid #f00; */
+    
+    /* background-position: bottom; */
+
+}
+#sect1 {
+    background-image: url(../img/2631F43551246B972B.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+     
+}
+.slideOuter {width: 1237px; margin: 0px auto; padding: 150px 0;}
+.slideInner { position: relative; 
+    }
+.slideInner .slide { 
+    height: 560px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: relative;
+}
+.slideInner .slide1 {background-color:  #000;}
+.slideInner .slide2 {background-color:  #000;}
+.slideInner .slide3 {background-color:  #000;}
+/* .slideInner .slide4 {background-image:linear-gradient(-125deg, #fff, #000);} */
+
+@-webkit-keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+  @keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+  
+  
+  
+.slideInner .text { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 300px; 
+    font-size: 40px;
+    width: 600px;
+}
+/* .slideInner .slide .text p:nth-child(1) { opacity: 0;}
+.slideInner .slide .text p:nth-child(2) { opacity: 0;} */
+.slideInner .slide.slick-active .text p { 
+    /* animation: fadeInDown 0.5s both; */
+    -webkit-animation: text-blur-out 4.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-blur-out 4.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* .slideInner .slide.slick-active .text p:nth-child(2) { 
+    animation: fadeInUp 0.5s both;
+} */
+.slideInner .slide1 .text p { 
+    background-image: linear-gradient(to right, #f00, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'East Sea Dokdo', cursive;
+    
+
+}
+.slideInner .slide2 .text p { 
+    background-image: linear-gradient(to right, #00f, #f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'East Sea Dokdo', cursive;
+}
+.slideInner .slide3 .text p { 
+    color: green;
+    font-family: 'East Sea Dokdo', cursive;
+}
+.slideInner .slide4 { overflow: hidden;}
+.slideInner .slide4 div { 
+    float: left; width: 25%;  height: 560px;
+}
+.slideInner .slide4 div img { width: 100%; height: 100%;}    
+.slideInner .slick-dots { 
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+.slideInner .slick-dots li { 
+    display: inline-block;
+    width: 100px; height: 3px; background-color: #fff;
+    margin: 0 3px;
+    position: relative;
+}
+.slideInner .slick-dots li:nth-child(1)::before { 
+    content: '소개';
+    color: #fff;
+    font-size: 20px;
+    position: absolute; bottom: -3px; left: 0;
+    width: 100%; text-align: center;
+}
+.slideInner .slick-dots li:nth-child(2)::before { 
+    content: '경력사항';
+    color: #fff;
+    font-size: 20px;
+    position: absolute; bottom: -3px; left: 0;
+    width: 100%; text-align: center;
+    word-break: keep-all;
+}
+.slideInner .slick-dots li:nth-child(3)::before { 
+    content: '좌우명';
+    color: #fff;
+    font-size: 20px;
+    position: absolute; bottom: -3px; left: 0;
+    width: 100%; text-align: center;
+    word-break: keep-all;
+}
+.slideInner .slick-dots li:nth-child(4)::before { 
+    content: '프로필';
+    color: #fff;
+    font-size: 20px;
+    position: absolute; bottom: -3px; left: 0;
+    width: 100%; text-align: center;
+    word-break: keep-all;
+}
+.slideInner .slick-dots li button { 
+    border: none;
+    width: 0px; height: 3px; background-color: red;
+    text-indent: -99999px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;left: 0;
+    transition: all 0s;
+}
+.slideInner .slick-dots li.slick-active button { 
+    width: 100px;
+    transition: all 3s;
+}
+.slideOuter { position: relative;}
+.slideOuter .plpa { 
+    position: absolute; bottom: 190px;
+    left: 50%; border: none;
+    font-size: 30px;
+    color: #fff; margin-left: 230px;
+}
+
+/* 두번째 박스 (스킬 그래프) */
+#sect2 { 
+    /* background-size: cover; */
+    position: relative;
+    background-image: url(../img/9973EB3D5D4869DE01.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    
+    /* background-image:linear-gradient( to top, rgb(85, 83, 83), #000) ; */
+}
+.autoClock{ position: absolute; bottom: 10px; right: 50px;
+    font-size: 30px; color: #fff; width: 400px;
+}
+.cursor { position: absolute; width: 50%; height: 100%; 
+    margin-left: -25%; top: 0; left: 50%;
+    cursor: url(../img/cursor1.png), auto;
+    z-index: 99;
+
+    display: block;
+
+}
+.skillContainer { height: 100%; text-align: center; padding: 8% 0 5%;
+    
+    background-image: url(../img/Layer-11.png);
+    background-repeat:no-repeat ;
+    background-position: center;
+    
+    position: relative;
+}
+.skillContainer > div { 
+    height: 80%; 
+    width: 70px;
+    /* border: 1px solid #53ecca; */
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+.skillContainer > div > p {
+    position: absolute; top: 100%;
+    left: 0; font-size: 20px;
+    width: 100%; text-align: center;
+    color: #53ecca;
+    text-shadow: 0px 0px 10px #53ecca;
+}
+.skillContainer > div > .score { 
+    position: absolute; bottom: 10px;
+    width: 100%;
+    transition: all 0.5s;
+    border-radius: 10px;
+} 
+.skillContainer > div.html > .score { 
+    background-color: #53ecca;
+    transition-delay: 0s;
+    height: 0%;
+}
+.skillContainer > div.css > .score { 
+    background-color: #53ecca;
+    transition-delay: 0s;
+    height: 0%;
+}
+.skillContainer > div.script > .score { 
+    background-color: #53ecca;
+    transition-delay: 0s;
+    height: 0%;
+}
+.skillContainer > div.jquery > .score { 
+    background-color: #53ecca;
+    transition-delay: 0s;
+    height: 0%;
+}
+.skillContainer > div.react > .score { 
+    background-color: #53ecca;
+    transition-delay: 0s;
+    height: 0%;
+}
+.skillContainer > div.html.on > .score { 
+    height: 80%;
+    transition-delay: 0s;
+    box-shadow: 0px 0px 10px rgba(83, 236, 202, 0.5);
+}
+.skillContainer > div.css.on > .score { 
+    height: 70%;
+    transition-delay: 0.5s;
+    box-shadow: 0px 0px 10px rgba(83, 236, 202, 0.5);
+}
+.skillContainer > div.script.on > .score { 
+    height: 50%;
+    transition-delay: 1s;
+    box-shadow: 0px 0px 10px rgba(83, 236, 202, 0.5);
+}
+.skillContainer > div.jquery.on > .score { 
+    height: 40%;
+    transition-delay: 1.5s;
+    box-shadow: 0px 0px 10px rgba(83, 236, 202, 0.5);
+}
+.skillContainer > div.react.on > .score { 
+    height: 60%;
+    transition-delay: 2s;
+    box-shadow: 0px 0px 10px rgba(83, 236, 202, 0.5);
+}
+.skillContainer .myscore { 
+    position: absolute; top: 10px; left: 0; 
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+.cbtn { 
+    position: absolute; bottom: 15px; left: 50%;
+    width: 100px; height: 50px;
+    margin-left: -50px;
+    z-index: 999; 
+    cursor: pointer;
+}
+
+/* 세 번째 박스 */
+
+#sect3 { padding: 50px 100px; background: url(../img/다운로드1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#sect3 .category { font-size: 20px; 
+    
+    margin-bottom: 20px;
+    text-shadow: rgb(184, 181, 181);
+}
+#sect3 .category a:hover {color: rgb(238, 226, 226);
+    transform: scale(1.2);
+   }
+#sect3 .category a { background-color: rgba(046,068, 066); 
+    padding: 7px 20px; display: inline-block;
+    border-radius: 5px; margin-right: 10px; margin-top: 150px; transition: all 0.5s;
+}
+#sect3 ul {overflow: hidden; }
+#sect3 ul li {
+    float: left; width: 23.5%; margin: 10px 0;
+    margin-right: 2%;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.5s;
+    transition-delay: 0s;
+}
+#sect3.on ul li:nth-child(1) { transition-delay: 0s; width: 500px; height: 300px; }
+#sect3.on ul li:nth-child(2) { transition-delay: 0.2s; width: 500px; height: 300px;}
+#sect3.on ul li:nth-child(3) { transition-delay: 0.4s; width: 500px; height: 300px;}
+#sect3.on ul li img { width: 100%; height: 100%;}
+#sect3.on ul li {
+    transform: scale(1);
+    opacity: 1;
+    
+}
+ /* 4번째  */
+#sect4 { padding: 0px 200px 50px 300px;
+    background-image:url(../img/instar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+#sect4 .formbox { 
+    opacity: 0;
+    transform: translate3d(0,100%,0);
+    transition: all 0.5s;
+    width: 700px;
+    margin: 0px 300px;
+    padding: 160px 0;
+}
+#sect4.on .formbox {
+    opacity: 1;
+    transform: translate3d(0,0%,0);
+}
+#sect4 .formbox fieldset{ background-color: #fff; }
+#sect4 col:nth-child(1) { width: 20%; }
+#sect4 col:nth-child(2) { width: 80%; }
+#sect4 tr {padding: 10px 5px; 
+    font-size: 20px; color: #000;
+}
+
+#sect4 td {padding: 10px 5px; 
+    font-size: 20px; color: #000;
+}
+#sect4 input[type=text] { width: 100px; height: 30px;
+    border: 1px solid #000;
+}
+#sect4 textarea { width: 300px; height: 100px; border: 1px solid rgb(158, 151, 151);}
+#sect4 .btn { text-align: center; margin: 20px;}
+#sect4 button {border: none; border-radius: 20px; width: 80px; height: 50px; font-size: 20px;
+    color: #fff;
+}
+#sect4 button[type=submit] { background-color: red;}
+#sect4 button[type=reset] { background-color: blue;}
