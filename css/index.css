@@ -249,6 +249,7 @@ section {
     width: 100%;
     transition: all 0.5s;
     border-radius: 10px;
+    overflow: hidden;
 } 
 .skillContainer > div.html > .score { 
     background-color: #53ecca;
@@ -334,12 +335,13 @@ section {
     margin-bottom: 20px;
     text-shadow: rgb(184, 181, 181);
 }
-#sect3 .category a:hover {color: rgb(238, 226, 226);
+#sect3 .category a:hover {
     transform: scale(1.2);
    }
 #sect3 .category a { background-color: rgba(046,068, 066); 
     padding: 7px 20px; display: inline-block;
     border-radius: 5px; margin-right: 10px; margin-top: 150px; transition: all 0.5s;
+    color: aliceblue;
 }
 #sect3 ul {overflow: hidden; }
 #sect3 ul li {
